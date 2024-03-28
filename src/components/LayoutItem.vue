@@ -1,21 +1,18 @@
 <!-- MyChildComponent.vue -->
 <template>
-  <div class="q-pa-md example-column-flex-order">
+  <div>
     <div class="row">
-      <div class="column">{{ todo.id }}</div>
-      <div class="column">
-        <div>{{ todo.task }}</div>
-        <div>{{ todo.completed }}</div>
-      </div>
+      <div class="column">{{ item.icon }}</div>
+      <div>{{ item.name }}</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Todo",
+  name: "LayoutItem",
   props: {
-    todo: {
+    item: {
       type: Object,
       required: true,
     },

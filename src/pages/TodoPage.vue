@@ -1,10 +1,12 @@
 <!-- MyParentComponent.vue -->
 <template>
-  <div>
-    <div v-for="(item, index) in tasks" :key="index">
-      <Todo :todo="item" />
+  <q-page>
+    <div>
+      <div v-for="(item, index) in tasks" :key="index">
+        <Todo :todo="item" />
+      </div>
     </div>
-  </div>
+  </q-page>
 </template>
 
 <script>
@@ -18,9 +20,9 @@ export default {
   data() {
     return {
       tasks: [
-        { id: 1, task: "Vue.js öğrenmek", responsible: "Ahmet" },
-        { id: 2, task: "React uygulaması geliştirmek", responsible: "Ayşe" },
-        { id: 3, task: "Angular projesi tasarlamak", responsible: "Mehmet" },
+        { id: 1, task: "Vue.js öğrenmek", completed: false },
+        { id: 2, task: "React uygulaması geliştirmek", completed: false },
+        { id: 3, task: "Angular projesi tasarlamak", completed: false },
       ],
     };
   },
